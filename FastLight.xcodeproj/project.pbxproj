@@ -17,8 +17,8 @@
 		4CCB6ADE16C4123A0045AA76 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CCB6ADD16C4123A0045AA76 /* Default@2x.png */; };
 		4CCB6AE016C4123A0045AA76 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CCB6ADF16C4123A0045AA76 /* Default-568h@2x.png */; };
 		4CCB6AE316C4123A0045AA76 /* FLTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCB6AE216C4123A0045AA76 /* FLTViewController.m */; };
-		4CCB6AE616C4123A0045AA76 /* FLTViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CCB6AE416C4123A0045AA76 /* FLTViewController_iPhone.xib */; };
-		4CCB6AE916C4123A0045AA76 /* FLTViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CCB6AE716C4123A0045AA76 /* FLTViewController_iPad.xib */; };
+		4CCB6AE616C4123A0045AA76 /* FLTViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CCB6AE416C4123A0045AA76 /* FLTViewController.xib */; };
+		4CCB6AF016C413370045AA76 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CCB6AEF16C413370045AA76 /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,8 +37,8 @@
 		4CCB6ADF16C4123A0045AA76 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		4CCB6AE116C4123A0045AA76 /* FLTViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FLTViewController.h; sourceTree = "<group>"; };
 		4CCB6AE216C4123A0045AA76 /* FLTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FLTViewController.m; sourceTree = "<group>"; };
-		4CCB6AE516C4123A0045AA76 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FLTViewController_iPhone.xib; sourceTree = "<group>"; };
-		4CCB6AE816C4123A0045AA76 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FLTViewController_iPad.xib; sourceTree = "<group>"; };
+		4CCB6AE516C4123A0045AA76 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FLTViewController.xib; sourceTree = "<group>"; };
+		4CCB6AEF16C413370045AA76 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CCB6AF016C413370045AA76 /* AVFoundation.framework in Frameworks */,
 				4CCB6ACA16C4123A0045AA76 /* UIKit.framework in Frameworks */,
 				4CCB6ACC16C4123A0045AA76 /* Foundation.framework in Frameworks */,
 				4CCB6ACE16C4123A0045AA76 /* CoreGraphics.framework in Frameworks */,
@@ -58,6 +59,7 @@
 		4CCB6ABD16C4123A0045AA76 = {
 			isa = PBXGroup;
 			children = (
+				4CCB6AEF16C413370045AA76 /* AVFoundation.framework */,
 				4CCB6ACF16C4123A0045AA76 /* FastLight */,
 				4CCB6AC816C4123A0045AA76 /* Frameworks */,
 				4CCB6AC716C4123A0045AA76 /* Products */,
@@ -89,8 +91,7 @@
 				4CCB6AD916C4123A0045AA76 /* FLTAppDelegate.m */,
 				4CCB6AE116C4123A0045AA76 /* FLTViewController.h */,
 				4CCB6AE216C4123A0045AA76 /* FLTViewController.m */,
-				4CCB6AE416C4123A0045AA76 /* FLTViewController_iPhone.xib */,
-				4CCB6AE716C4123A0045AA76 /* FLTViewController_iPad.xib */,
+				4CCB6AE416C4123A0045AA76 /* FLTViewController.xib */,
 				4CCB6AD016C4123A0045AA76 /* Supporting Files */,
 			);
 			path = FastLight;
@@ -166,8 +167,7 @@
 				4CCB6ADC16C4123A0045AA76 /* Default.png in Resources */,
 				4CCB6ADE16C4123A0045AA76 /* Default@2x.png in Resources */,
 				4CCB6AE016C4123A0045AA76 /* Default-568h@2x.png in Resources */,
-				4CCB6AE616C4123A0045AA76 /* FLTViewController_iPhone.xib in Resources */,
-				4CCB6AE916C4123A0045AA76 /* FLTViewController_iPad.xib in Resources */,
+				4CCB6AE616C4123A0045AA76 /* FLTViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,20 +195,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		4CCB6AE416C4123A0045AA76 /* FLTViewController_iPhone.xib */ = {
+		4CCB6AE416C4123A0045AA76 /* FLTViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				4CCB6AE516C4123A0045AA76 /* en */,
 			);
-			name = FLTViewController_iPhone.xib;
-			sourceTree = "<group>";
-		};
-		4CCB6AE716C4123A0045AA76 /* FLTViewController_iPad.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4CCB6AE816C4123A0045AA76 /* en */,
-			);
-			name = FLTViewController_iPad.xib;
+			name = FLTViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -278,6 +270,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FastLight/FastLight-Prefix.pch";
 				INFOPLIST_FILE = "FastLight/FastLight-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -289,6 +282,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FastLight/FastLight-Prefix.pch";
 				INFOPLIST_FILE = "FastLight/FastLight-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

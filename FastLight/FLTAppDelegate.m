@@ -9,20 +9,23 @@
 #import "FLTAppDelegate.h"
 
 #import "FLTViewController.h"
+#import <AVFoundation/AVFoundation.h>
+
 
 @implementation FLTAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        self.viewController = [[FLTViewController alloc] initWithNibName:@"FLTViewController_iPhone" bundle:nil];
-    } else {
-        self.viewController = [[FLTViewController alloc] initWithNibName:@"FLTViewController_iPad" bundle:nil];
-    }
+    self.viewController = [[FLTViewController alloc] initWithNibName:@"FLTViewController" bundle:nil];
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
+    
+    // Enable light at start, as willEnterForeground is not called at first launch.
+    [self.viewController setLightEnabled:YES];
+    
     return YES;
 }
 
@@ -36,11 +39,13 @@
 {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    [self.viewController setLightEnabled:NO];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+    [self.viewController setLightEnabled:YES];
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application

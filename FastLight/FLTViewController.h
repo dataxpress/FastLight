@@ -10,4 +10,6 @@
 
 @interface FLTViewController : UIViewController
 
+-(void)setLightEnabled:(BOOL)lightEnabled;
+
 @end
